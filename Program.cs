@@ -1,11 +1,14 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
 
-class Program
+class Program 
 {
     static void Main()
-    {
+    {   
+        //https://www.selenium.dev/documentation/
+
         // Tarayıcı ayarlarını oluşturma
         //https://github.com/GoogleChrome/chrome-launcher/blob/main/docs/chrome-flags-for-tools.md
         var options = new ChromeOptions();
@@ -13,9 +16,10 @@ class Program
         options.AddArgument("--start-maximized");
         // options.AddArgument("--headless"); //ekran açılmadan çalıştırır
 
-
         // Tarayıcı sürücüsünü başlatma
         IWebDriver driver = new ChromeDriver(options);
+
+        Thread.Sleep(10000);
 
         // Web sayfasını açma
         driver.Navigate().GoToUrl("https://www.trendyol.com/giris");
@@ -70,6 +74,8 @@ class Program
             Console.WriteLine("hata" + ex);
         }
 
+        Thread.Sleep(2000);
+
         ///İleri, Geri, Yenile  
         driver.Navigate().Back();
         // driver.Navigate().Forward();
@@ -107,9 +113,6 @@ class Program
 
         }
 
-
-
-
         //IWebElement scroll = driver.FindElement(By.Id("footer-container"));
         //new Actions(driver)
         //    .ScrollToElement(scroll)
@@ -117,12 +120,22 @@ class Program
         //    //.ScrollByAmount(0, deltaY)
         //    .Perform();
 
+
         //    new Actions(driver)
         //.KeyDown(Keys.Shift)
         //.SendKeys("a")
         //.KeyUp(Keys.Shift)
         //.SendKeys("b")
         //.Perform();
+
+        //new Actions(driver)
+        //    .KeyDown(Keys.Control)
+        //    .KeyUp(Keys.Alt)
+        //    .KeyUp(Keys.LeftAlt)
+        //    .KeyUp(Keys.Escape)
+        //    .KeyUp(Keys.Space)
+        //    .KeyUp(Keys.Backspace)
+        //    .Perform();
 
 
         Console.ReadLine();
