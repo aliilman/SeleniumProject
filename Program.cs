@@ -1,12 +1,37 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
+using OpenQA.Selenium.VirtualAuth;
 
 class Program 
 {
     static void Main()
-    {   
+    {
+        var options = new ChromeOptions();
+
+        options.AddArgument("--start-maximized");
+        options.AddArgument("--remote-allow-origins=*");
+       
+
+        // Tarayıcı sürücüsünü başlatma
+        IWebDriver driver = new ChromeDriver(options);
+
+
+        // Web sayfasını açma
+        driver.Navigate().GoToUrl("https://the-internet.herokuapp.com/basic_auth");
+
+
+        Extencions.waitforpageload(driver);//sayfa hazır olana kadar bekle
+
+
+        
+    }
+
+    public static void Arsiv()
+    {
+
         //https://www.selenium.dev/documentation/
 
         // Tarayıcı ayarlarını oluşturma
@@ -80,6 +105,9 @@ class Program
         driver.Navigate().Back();
         // driver.Navigate().Forward();
         //driver.Navigate().Refresh();
+
+        //*************************************************
+
 
 
 

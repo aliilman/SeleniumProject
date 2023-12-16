@@ -20,3 +20,4 @@ C:\Users\PC_4232\Desktop\SelenyumProjesi\SelenyumProjesi\obj\Debug\net7.0\Seleny
 C:\Users\PC_4232\Desktop\SelenyumProjesi\SelenyumProjesi\obj\Debug\net7.0\SelenyumProjesi.genruntimeconfig.cache
 C:\Users\PC_4232\Desktop\SelenyumProjesi\SelenyumProjesi\obj\Debug\net7.0\ref\SelenyumProjesi.dll
 C:\Users\PC_4232\Desktop\SelenyumProjesi\SelenyumProjesi\obj\Debug\net7.0\SelenyumProjesi.sourcelink.json
+C:\Users\PC_4232\Desktop\SelenyumProjesi\SelenyumProjesi\bin\Debug\net7.0\WebDriver.Support.dll
