@@ -13,6 +13,8 @@ class Program
 
         options.AddArgument("--start-maximized");
         options.AddArgument("--remote-allow-origins=*");
+
+        
        
 
         // Tarayıcı sürücüsünü başlatma
